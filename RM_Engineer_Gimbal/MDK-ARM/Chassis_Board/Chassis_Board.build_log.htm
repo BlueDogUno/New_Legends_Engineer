@@ -1,0 +1,110 @@
+<html>
+<body>
+<pre>
+<h1>µVision Build Log</h1>
+<h2>Tool Versions:</h2>
+IDE-Version: ¦ÌVision V5.35.0.0
+Copyright (C) 2021 ARM Ltd and ARM Germany GmbH. All rights reserved.
+License Information: 1 Admonition, 1, LIC=76F5U-S14DQ-Y88FK-ZN1AC-0WQZN-QD2A0
+ 
+Tool Versions:
+Toolchain:       MDK-ARM Plus  Version: 5.35.0.2
+Toolchain Path:  D:\Code\IDEss\keil\ARM\ARMCC\Bin
+C Compiler:      Armcc.exe V5.06 update 7 (build 960)
+Assembler:       Armasm.exe V5.06 update 7 (build 960)
+Linker/Locator:  ArmLink.exe V5.06 update 7 (build 960)
+Library Manager: ArmAr.exe V5.06 update 7 (build 960)
+Hex Converter:   FromElf.exe V5.06 update 7 (build 960)
+CPU DLL:         SARMCM3.DLL V5.35.0.2
+Dialog DLL:      DCM.DLL V1.17.3.0
+Target DLL:      STLink\ST-LINKIII-KEIL_SWO.dll V3.0.9.0
+Dialog DLL:      TCM.DLL V1.53.0.0
+ 
+<h2>Project:</h2>
+E:\Proj\1.RM\1.Code&machine\1.engineer\QB\1.0\New_Legends_Engineer\RM_Engineer_Gimbal 1.0\MDK-ARM\Chassis_Board.uvprojx
+Project File Date:  04/21/2024
+
+<h2>Output:</h2>
+*** Using Compiler 'V5.06 update 7 (build 960)', folder: 'D:\Code\IDEss\keil\ARM\ARMCC\Bin'
+Build target 'Chassis_Board'
+compiling auto.cpp...
+compiling arm_ctrl_task.cpp...
+compiling arm_ctrl.cpp...
+..\user_code\module\arm_ctrl.cpp(73): warning:  #175-D: subscript out of range
+      terminal_motor[0].speed_pid.init(PID_SPEED, roll_speed_pid_parm, &terminal_motor[3].speed, &terminal_motor[3].speed_set, NULL);
+..\user_code\module\arm_ctrl.cpp(73): warning:  #175-D: subscript out of range
+      terminal_motor[0].speed_pid.init(PID_SPEED, roll_speed_pid_parm, &terminal_motor[3].speed, &terminal_motor[3].speed_set, NULL);
+..\user_code\module\arm_ctrl.cpp(76): warning:  #175-D: subscript out of range
+      terminal_motor[0].angle_pid.init(PID_ANGLE, roll_angle_pid_parm, &terminal_motor[3].total_angle , &terminal_motor[3].angle_set, 0);
+..\user_code\module\arm_ctrl.cpp(76): warning:  #175-D: subscript out of range
+      terminal_motor[0].angle_pid.init(PID_ANGLE, roll_angle_pid_parm, &terminal_motor[3].total_angle , &terminal_motor[3].angle_set, 0);
+..\user_code\module\arm_ctrl.cpp(81): warning:  #175-D: subscript out of range
+      terminal_motor[0].speed_pid.init(PID_SPEED, yaw_speed_pid_parm, &terminal_motor[3].speed, &terminal_motor[3].speed_set, NULL);
+..\user_code\module\arm_ctrl.cpp(81): warning:  #175-D: subscript out of range
+      terminal_motor[0].speed_pid.init(PID_SPEED, yaw_speed_pid_parm, &terminal_motor[3].speed, &terminal_motor[3].speed_set, NULL);
+..\user_code\module\arm_ctrl.cpp(84): warning:  #175-D: subscript out of range
+      terminal_motor[0].angle_pid.init(PID_ANGLE, yaw_angle_pid_parm, &terminal_motor[3].total_angle , &terminal_motor[3].angle_set, 0);
+..\user_code\module\arm_ctrl.cpp(84): warning:  #175-D: subscript out of range
+      terminal_motor[0].angle_pid.init(PID_ANGLE, yaw_angle_pid_parm, &terminal_motor[3].total_angle , &terminal_motor[3].angle_set, 0);
+..\user_code\module\arm_ctrl.cpp(89): warning:  #175-D: subscript out of range
+      terminal_motor[0].speed_pid.init(PID_SPEED, pitch_speed_pid_parm, &terminal_motor[3].speed, &terminal_motor[3].speed_set, NULL);
+..\user_code\module\arm_ctrl.cpp(89): warning:  #175-D: subscript out of range
+      terminal_motor[0].speed_pid.init(PID_SPEED, pitch_speed_pid_parm, &terminal_motor[3].speed, &terminal_motor[3].speed_set, NULL);
+..\user_code\module\arm_ctrl.cpp(92): warning:  #175-D: subscript out of range
+      terminal_motor[0].angle_pid.init(PID_ANGLE, pitch_angle_pid_parm, &terminal_motor[3].total_angle , &terminal_motor[3].angle_set, 0);
+..\user_code\module\arm_ctrl.cpp(92): warning:  #175-D: subscript out of range
+      terminal_motor[0].angle_pid.init(PID_ANGLE, pitch_angle_pid_parm, &terminal_motor[3].total_angle , &terminal_motor[3].angle_set, 0);
+..\user_code\module\arm_ctrl.cpp(97): warning:  #175-D: subscript out of range
+      elbow_motor[2].speed_pid.init(PID_SPEED, x_stretch_speed_pid_parm, &elbow_motor[3].speed, &elbow_motor[3].speed_set, NULL);
+..\user_code\module\arm_ctrl.cpp(97): warning:  #175-D: subscript out of range
+      elbow_motor[2].speed_pid.init(PID_SPEED, x_stretch_speed_pid_parm, &elbow_motor[3].speed, &elbow_motor[3].speed_set, NULL);
+..\user_code\module\arm_ctrl.cpp(97): warning:  #175-D: subscript out of range
+      elbow_motor[2].speed_pid.init(PID_SPEED, x_stretch_speed_pid_parm, &elbow_motor[3].speed, &elbow_motor[3].speed_set, NULL);
+..\user_code\module\arm_ctrl.cpp(98): warning:  #175-D: subscript out of range
+      elbow_motor[2].speed_pid.pid_clear();
+..\user_code\module\arm_ctrl.cpp(102): warning:  #175-D: subscript out of range
+      elbow_motor[1].speed_pid.init(PID_SPEED, y_slid_speed_pid_parm, &elbow_motor[3].speed, &elbow_motor[3].speed_set, NULL);
+..\user_code\module\arm_ctrl.cpp(102): warning:  #175-D: subscript out of range
+      elbow_motor[1].speed_pid.init(PID_SPEED, y_slid_speed_pid_parm, &elbow_motor[3].speed, &elbow_motor[3].speed_set, NULL);
+..\user_code\module\arm_ctrl.cpp(270): warning:  #175-D: subscript out of range
+              terminal_motor[CAN_TERMINAL_ROLL].angle_set += vroll_set;
+..\user_code\module\arm_ctrl.cpp(283): warning:  #175-D: subscript out of range
+          terminal_hold_angle[CAN_TERMINAL_ROLL] = terminal_motor[CAN_TERMINAL_ROLL].angle_set;
+..\user_code\module\arm_ctrl.cpp(283): warning:  #175-D: subscript out of range
+          terminal_hold_angle[CAN_TERMINAL_ROLL] = terminal_motor[CAN_TERMINAL_ROLL].angle_set;
+..\user_code\module\arm_ctrl.cpp(290): warning:  #175-D: subscript out of range
+          terminal_motor[CAN_TERMINAL_ROLL].angle_set = terminal_hold_angle[CAN_TERMINAL_ROLL];
+..\user_code\module\arm_ctrl.cpp(290): warning:  #175-D: subscript out of range
+          terminal_motor[CAN_TERMINAL_ROLL].angle_set = terminal_hold_angle[CAN_TERMINAL_ROLL];
+..\user_code\module\arm_ctrl.cpp: 23 warnings, 0 errors
+linking...
+Program Size: Code=34576 RO-data=688 RW-data=588 ZI-data=56484  
+FromELF: creating hex file...
+"Chassis_Board\Chassis_Board.axf" - 0 Error(s), 23 Warning(s).
+
+<h2>Software Packages used:</h2>
+
+Package Vendor: ARM
+                http://www.keil.com/pack/ARM.CMSIS.5.8.0.pack
+                ARM.CMSIS.5.8.0
+                CMSIS (Common Microcontroller Software Interface Standard)
+   * Component: CORE Version: 5.5.0
+
+Package Vendor: Keil
+                https://www.keil.com/pack/Keil.STM32F4xx_DFP.2.17.0.pack
+                Keil.STM32F4xx_DFP.2.17.0
+                STMicroelectronics STM32F4 Series Device Support, Drivers and Examples
+
+<h2>Collection of Component include folders:</h2>
+  .\RTE\_Chassis_Board
+  D:\Code\IDEss\keil\ARM\CMSIS\5.8.0\CMSIS\Core\Include
+  D:\Code\IDEss\keil\Keil\STM32F4xx_DFP\2.17.0\Drivers\CMSIS\Device\ST\STM32F4xx\Include
+
+<h2>Collection of Component Files used:</h2>
+
+   * Component: ARM::CMSIS:CORE:5.5.0
+      Include file:  CMSIS\Core\Include\tz_context.h
+Build Time Elapsed:  00:00:01
+</pre>
+</body>
+</html>
