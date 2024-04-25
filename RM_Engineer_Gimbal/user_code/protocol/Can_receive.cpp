@@ -1,12 +1,10 @@
 #include "can_receive.h"
-
 #include "cmsis_os.h"
 #include "main.h"
-
 #include "bsp_can.h"
 #include "can.h"
-
 #include "struct_typedef.h"
+#include "DMPower.h"
 
 extern CAN_HandleTypeDef hcan1;
 extern CAN_HandleTypeDef hcan2;

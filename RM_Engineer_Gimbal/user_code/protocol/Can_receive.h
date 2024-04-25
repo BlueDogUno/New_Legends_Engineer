@@ -2,16 +2,15 @@
 #define CAN_RECEIVE_H
 
 #include "main.h"
-
 #include "struct_typedef.h"
+#include "DMPower.h"
 
 extern CAN_HandleTypeDef hcan1;
 extern CAN_HandleTypeDef hcan2;
 
 
-#define MINE_CAN hcan1
-#define CATCH_CAN hcan1
-#define BOARD_COM_CAN hcan2
+#define ARM_COM hcan2
+#define DM_ARM_COM hcan1
 
 
 /* CAN send and receive ID */
@@ -40,6 +39,23 @@ typedef enum
   CAN_UI_COM_ID = 0x305,
 
 } can_msg_id_e;
+
+
+typedef enum
+{
+    CAN_ROLL_ID = 0x201,//[0]
+    CAN_Y_SLID_ID = 0x202,//[1]
+    CAN_X_STRETCH_ID = 0x203,//[2]
+
+} can_msg_id_can2_e;
+
+
+typedef enum
+{
+  CAN_DAMIAO_YAW = 0x02,
+  CAN_DAMIAO_PITCH = 0x04,
+
+} can_msg_id_can1_e;
 
 // rm motor data
 typedef struct

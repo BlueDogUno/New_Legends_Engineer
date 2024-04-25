@@ -85,46 +85,35 @@ extern "C"
     {
         CAN_RxHeaderTypeDef rx_header;
         uint8_t rx_data[8];
-        if (hcan == &MINE_CAN) //接底盘CAN 信息
+        if (hcan == &ARM_COM) 
         {
             HAL_CAN_GetRxMessage(hcan, CAN_RX_FIFO0, &rx_header, rx_data);
             switch (rx_header.StdId)
             {
-                case CAN_MINE_FR_MOTOR_ID: 
-				case CAN_MINE_FL_MOTOR_ID:
-				case CAN_STRETCH_FR_MOTOR_ID:           
-				case CAN_STRETCH_FL_MOTOR_ID:
+                case CAN_ROLL_ID: 
+				case CAN_Y_SLID_ID:
+				case CAN_X_STRETCH_ID:           
 				{
 					static int j;
-					j = rx_header.StdId - CAN_MINE_FR_MOTOR_ID;
-					//can_receive.get_arm_motor_measure(j,rx_data);
+					j = rx_header.StdId - CAN_ROLL_ID;
+					can_receive.get_arm_motor_measure(j,rx_data);
 					break;
 				}
-                case CAN_SPIN_R_MOTOR_ID:
-                case CAN_SPIN_L_MOTOR_ID:
-                case CAN_CATCH_YAW_MOTOR_ID:
-                case CAN_CATCH_SUCTION_MOTOR_ID:
-                {
-                    static int i;
-					i = rx_header.StdId - CAN_SPIN_R_MOTOR_ID;
-					//can_receive.get_catch_motor_measure(i,rx_data);
-					break;
-                }
                 default:
                 {
                     break;
                 }
             }
         }
-        else if (hcan == &BOARD_COM_CAN) //接底盘CAN 信息
+        else if (hcan == &DM_ARM_COM) //接底盘CAN 信息
         {
             HAL_CAN_GetRxMessage(hcan, CAN_RX_FIFO0, &rx_header, rx_data);
             switch (rx_header.StdId)
             {
-                case CAN_SEND_LIFT_AUTOSTATE_COM_ID:
+                case CAN_DAMIAO_YAW:
+                case CAN_DAMIAO_PITCH:
                 {
-                    can_receive.receive_lift_auto_state(rx_data);
-					break;
+                    //达妙接收
                 }
                 default:
                 {
